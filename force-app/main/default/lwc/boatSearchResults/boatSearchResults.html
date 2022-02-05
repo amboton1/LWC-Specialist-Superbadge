@@ -1,0 +1,34 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={boats}>
+        <lightning-tabset variant="scoped">
+          <lightning-tab label="Gallery">
+            <div class="slds-scrollable_y">
+              <!-- layout horizontally aligned to the center  -->
+              <!-- layout allowing multiple rows -->
+              <lightning-layout horizontal-align="center" multiple-rows>
+                <!-- template looping through each boat -->
+                <template for:each={boats} for:item="boat">
+                  <!-- lightning-layout-item for each boat -->
+                  <lightning-layout-item key={boat.Id} padding="around-small" size="12" small-device-size="6" medium-device-size="4" large-device-size="3" >
+                     <!-- Each BoatTile goes here -->
+                     <c-boat-tile onboatselect={updateSelectedTile} boat={boat} selected-boat-id={selectedBoatId}></c-boat-tile>
+                  </lightning-layout-item>
+                </template>
+              </lightning-layout>
+            </div>
+          </lightning-tab>
+          <lightning-tab label="Boat Editor">
+            <!-- Scrollable div and lightning datatable go here -->
+            <div class="slds-scrollable_y slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                <lightning-datatable hide-checkbox-column data={boats} columns={columns} key-field="Id" onsave={handleSave} draft-values={draftValues}></lightning-datatable>
+            </div>
+          </lightning-tab>
+           <lightning-tab label="Boats Near Me">
+            <!-- boatsNearMe component goes here -->
+            <c-boats-near-me boat-type-id={boatTypeId}></c-boats-near-me>
+          </lightning-tab>
+        </lightning-tabset>
+    </template>
+</template>

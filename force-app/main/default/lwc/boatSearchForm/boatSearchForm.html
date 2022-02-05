@@ -1,0 +1,15 @@
+<template>
+    <lightning-layout class="slds-align_absolute-center">
+      <lightning-layout-item class="slds-align-middle" style="width: 250px;">
+        <lightning-combobox
+            name="progress"
+            class="slds-align-middle"
+            label="Status"
+            value={selectedBoatTypeId}
+            placeholder="All Types"
+            options={searchOptions}
+            onchange={handleSearchOptionChange} >
+        </lightning-combobox>
+      </lightning-layout-item>
+    </lightning-layout>
+</template>
