@@ -30,3 +30,10 @@ Finally, you convert an existing, outdated Visualforce page that shows boats sim
 
 # Application Design
 
+![image](https://user-images.githubusercontent.com/19265409/152642738-5d2ed0e7-a2b6-43b6-8313-477c8b2be95b.png)
+
+![image](https://user-images.githubusercontent.com/19265409/152642765-ee613f84-e524-4d58-b919-27624594eed6.png)
+
+![image](https://user-images.githubusercontent.com/19265409/152642797-542f2418-96c4-4f2d-828e-6b23ef592ea4.png)
+
+![image](https://user-images.githubusercontent.com/19265409/152642802-b4641599-8af8-45cf-9826-a42c4dfa5b8e.png)
