@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title={boatEditLabel} icon-name="utility:record_update">
+        <template if:false={showEditForm}>
+            <p class="slds-text-title_caps slds-p-left_small">{notSelectedLabel}</p>
+        </template>
+        <template if:true={showEditForm}>
+            <lightning-record-form
+                    record-id={boatId}
+                    object-api-name={objectApiName}
+                    fields={fields}
+                    mode="edit">
+            </lightning-record-form>
+        </template>
+    </lightning-card>
+</template>
